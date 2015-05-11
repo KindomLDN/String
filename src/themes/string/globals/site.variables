@@ -1,0 +1,50 @@
+/*******************************
+         Site Settings
+*******************************/
+
+@headerFont        : 'Open Sans', sans-serif;
+@pageFont          : 'Open Sans', sans-serif;
+@fontSmoothing     : antialiased;
+
+@importGoogleFonts : true;
+@googleFontName    : 'Open Sans';
+@googleFontSizes   : '300,400,600';
+
+@googleProtocol    : 'https://';
+@googleFontRequest : '@{googleFontName}:@{googleFontSizes}&subset=@{googleSubset}';
+
+
+/*-------------------
+     Page Heading
+--------------------*/
+@headerFontWeight : 300;
+@headerLineHeight : 1.4em;
+
+@h1               : 2.3rem;
+
+/*-------------------
+      Site Colors
+--------------------*/
+
+/*---  Colors  ---*/
+@blue             : #768e98;
+@darkblue 		  : #063b4b;
+
+/*---  Gradient  ---*/
+@bluegrad  		  : linear-gradient(2deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
+
+/*-------------------
+    Brand Colors
+--------------------*/
+
+@primaryColor        : @blue;
+
+
+/*-------------------
+        Page
+--------------------*/
+
+@pageBackground      : @blue;
+
+@lineHeight          : 1.4em;
+@textColor           : @white;

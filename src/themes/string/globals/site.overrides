@@ -1,0 +1,254 @@
+/*******************************
+        Global Overrides
+*******************************/
+
+body {
+	-webkit-font-smoothing: antialiased;
+}
+
+#string {
+
+/*-------------------
+      Container
+--------------------*/
+
+	.container {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		padding: 2em;
+		-webkit-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+
+		@media only screen and (max-width: @widescreenMonitorBreakpoint) and (min-width: @computerBreakpoint) {
+			width: 850px;
+		}
+
+		@media only screen and (max-width: @computerBreakpoint) and (min-width: @tabletBreakpoint) {
+			width: 700px;
+		}
+
+		@media only screen and (max-width: @tabletBreakpoint) and (min-width: @mobileBreakpoint) {
+			width: 600px;
+		}
+
+		@media only screen and (max-width: @mobileBreakpoint) and (min-width: @mobileBreakpoint) {
+			width: 100%;
+		}
+	}
+
+
+/*-------------------
+       Page
+--------------------*/
+	
+	.page {
+		padding: 0em;
+	}
+
+
+/*-------------------
+       Parallax
+--------------------*/
+
+	.parallax {
+		perspective: 300px;
+		height: 100vh;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+
+	.parallax__layer {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
+
+	.parallax__layer--fore {
+		-webkit-transform: translateZ(90px) scale(.7);
+		transform: translateZ(90px) scale(.7);
+		z-index: 1;
+	}
+
+	.parallax__layer--base {
+		-webkit-transform: translateZ(0);
+		transform: translateZ(0);
+		z-index: 4;
+	}
+
+	.parallax__layer--back {
+		-webkit-transform: translateZ(-300px) scale(2);
+		transform: translateZ(-300px) scale(2);
+		z-index: 3;
+	}
+
+	.parallax__group {
+		position: relative;
+		height: 100vh;
+		-webkit-transform-style: preserve-3d;
+		transform-style: preserve-3d;
+		-webkit-transition: -webkit-transform 0.5s;
+		transition: transform 0.5s;
+	}	
+
+/*-------------------
+       Intro
+--------------------*/
+
+/* Base */
+
+	#group1 {
+		z-index: 3;
+		text-align: center;
+
+		.logo {
+			margin-bottom: 5em;
+		}
+
+
+		.intro-txt {
+			color: @white;
+
+			h1 {
+				font-size: @h1;
+				font-weight: 300;
+				line-height: 1.4em;
+				margin-bottom: 2em;
+			}
+
+			i {
+				text-align: center;
+				margin: 0 0 2rem 50%;
+				-webkit-transform: translate(-50%, 0);
+				transform: translate(-50%, 0);
+
+			}
+
+			p {
+				font-size: 1.2em;
+				line-height: 1.4em;
+				text-align: left;
+			}
+		}
+
+/* Back */
+
+		.parallax__layer--back {
+			/* Changing BG Colour Effect */
+
+			background: @bluegrad;
+
+			// -webkit-animation: AnimationName 53s ease infinite;
+			// -moz-animation: AnimationName 53s ease infinite;
+			// animation: AnimationName 53s ease infinite;
+
+			// @-webkit-keyframes AnimationName {
+			//     0%{background-position:0% 96%}
+			//     50%{background-position:100% 5%}
+			//     100%{background-position:0% 96%}
+			// }
+			// @-moz-keyframes AnimationName {
+			//     0%{background-position:0% 96%}
+			//     50%{background-position:100% 5%}
+			//     100%{background-position:0% 96%}
+			// }
+			// @keyframes AnimationName { 
+			//     0%{background-position:0% 96%}
+			//     50%{background-position:100% 5%}
+			//     100%{background-position:0% 96%}
+			// }
+
+
+		}
+	}
+
+/*-------------------
+       Video
+--------------------*/
+
+	#group2 {
+		z-index: 4;
+		text-align: center;
+
+		.parallax__layer--base {
+			background: @darkblue;
+		}
+
+		.parallax__layer--base::after {
+			content: "";
+			background: url(themes/string/assets/article-2732361-1500F8CB000005DC-627_634x417.jpg) no-repeat center center;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			opacity: 0.5;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			z-index: -1;
+		}
+
+	}
+
+/*-------------------
+     Information
+--------------------*/
+
+/*-------------------
+     String Visual
+--------------------*/
+
+	#group4.parallax__group {
+		height: 700px;
+	}
+	
+	#group4 {
+
+		.parallax__layer--base {
+			height: 700px;
+
+		}
+
+		.parallax__layer--back {
+			height: 100vh;
+			background: @bluegrad;
+
+		}
+
+		.parallax__layer--back::after {
+			content: "";			
+			background: url(themes/string/assets/parallax_image_2.png) no-repeat center center;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;
+			opacity: 0.5;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			position: absolute;
+			z-index: -1;		
+		}
+	}
+
+/*-------------------
+     Information
+--------------------*/
+
+
+	#group5 {
+
+		.parallax__layer--base {
+			background: @blue;
+		}	
+	}
+
+
+
+/* End of #string */
+}
