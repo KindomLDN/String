@@ -18,17 +18,17 @@
 /* Standard */
 .ui.header {
   border: none;
-  margin: -webkit-calc(2rem -  0.2em ) 0em 1rem;
-  margin: calc(2rem -  0.2em ) 0em 1rem;
+  margin: -webkit-calc(2rem -  0.25em ) 0em 1rem;
+  margin: calc(2rem -  0.25em ) 0em 1rem;
   padding: 0em 0em;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  line-height: 1.4em;
+  line-height: 1.5em;
   text-transform: none;
   color: #ffffff;
 }
 .ui.header:first-child {
-  margin-top: -0.2em;
+  margin-top: -0.25em;
 }
 .ui.header:last-child {
   margin-bottom: 0em;
@@ -55,7 +55,7 @@
   display: table-cell;
   opacity: 1;
   font-size: 1.5em;
-  padding-top: 0.2em;
+  padding-top: 0.25em;
   vertical-align: middle;
 }
 
@@ -73,7 +73,7 @@
 .ui.header > .image,
 .ui.header > img {
   display: inline-block;
-  margin-top: 0.2em;
+  margin-top: 0.25em;
   width: 2.5em;
   height: auto;
   vertical-align: middle;
@@ -132,10 +132,10 @@
 ---------------*/
 
 h1.ui.header {
-  font-size: 2.3rem;
+  font-size: 2rem;
 }
 h2.ui.header {
-  font-size: 1.714rem;
+  font-size: 1.5rem;
 }
 h3.ui.header {
   font-size: 1.28rem;
@@ -170,10 +170,10 @@ h5.ui.header .sub.header {
 
 .ui.huge.header {
   min-height: 1em;
-  font-size: 2.3em;
+  font-size: 2em;
 }
 .ui.large.header {
-  font-size: 1.714em;
+  font-size: 1.5em;
 }
 .ui.medium.header {
   font-size: 1.28em;
@@ -519,10 +519,10 @@ a.ui.inverted.yellow.header:hover {
   font-size: 1.28em;
 }
 .ui.large.block.header {
-  font-size: 1.714em;
+  font-size: 1.5em;
 }
 .ui.huge.block.header {
-  font-size: 2.3em;
+  font-size: 2em;
 }
 
 /*-------------------

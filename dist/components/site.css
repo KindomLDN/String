@@ -20,7 +20,7 @@ body {
   height: 100%;
 }
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 body {
   margin: 0px;
@@ -28,7 +28,7 @@ body {
   min-width: 320px;
   background: #768e98;
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.4em;
   color: #ffffff;
   font-smoothing: antialiased;
@@ -45,18 +45,18 @@ h3,
 h4,
 h5 {
   font-family: 'Open Sans', sans-serif;
-  line-height: 1.4em;
-  margin: -webkit-calc(2rem -  0.2em ) 0em 1rem;
-  margin: calc(2rem -  0.2em ) 0em 1rem;
+  line-height: 1.5em;
+  margin: -webkit-calc(2rem -  0.25em ) 0em 1rem;
+  margin: calc(2rem -  0.25em ) 0em 1rem;
   font-weight: 300;
   padding: 0em;
 }
 h1 {
   min-height: 1rem;
-  font-size: 2.3rem;
+  font-size: 2rem;
 }
 h2 {
-  font-size: 1.714rem;
+  font-size: 1.5rem;
 }
 h3 {
   font-size: 1.28rem;
@@ -185,12 +185,7 @@ body {
 
   
 /*-------------------
-     Information
---------------------*/
-
-  
-/*-------------------
-     String Visual
+     String Info
 --------------------*/
 
   
@@ -206,11 +201,19 @@ body {
   left: 50%;
   top: 50%;
   padding: 2em;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
       transform: translate(-50%, -50%);
+  width: 1000px;
 }
-@media only screen and (max-width: 1920px) and (min-width: 992px) {
+@media only screen and (max-width: 1920px) and (min-width: 1400px) {
+  #string .container {
+    width: 1000px;
+  }
+}
+@media only screen and (max-width: 1400px) and (min-width: 992px) {
   #string .container {
     width: 850px;
   }
@@ -279,16 +282,17 @@ body {
 #string #group1 .logo {
   margin-bottom: 5em;
 }
+#string #group1 .logo img {
+  vertical-align: middle;
+}
+#string #group1 .logo .string-txt {
+  padding: 20px 0 0 25px;
+  height: 100px;
+}
 #string #group1 .intro-txt {
   color: #ffffff;
 }
-#string #group1 .intro-txt h1 {
-  font-size: 2.3rem;
-  font-weight: 300;
-  line-height: 1.4em;
-  margin-bottom: 2em;
-}
-#string #group1 .intro-txt i {
+#string #group1 .intro-txt img {
   text-align: center;
   margin: 0 0 2rem 50%;
   -webkit-transform: translate(-50%, 0);
@@ -296,9 +300,15 @@ body {
       transform: translate(-50%, 0);
 }
 #string #group1 .intro-txt p {
-  font-size: 1.2em;
+  text-align: center;
   line-height: 1.4em;
-  text-align: left;
+}
+#string #group1 .intro-txt .intro-pad {
+  margin-bottom: 5rem;
+}
+#string #group1 .intro-txt .intro-pad h1,
+#string #group1 .intro-txt .intro-pad h2 {
+  margin: 0;
 }
 #string #group1 .parallax__layer--back {
   
@@ -325,6 +335,24 @@ body {
   position: absolute;
   z-index: -1;
 }
+#string #group2 .container {
+  width: 1100px;
+}
+@media only screen and (max-width: 1400px) and (min-width: 992px) {
+  #string #group2 .container {
+    width: 900px;
+  }
+}
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  #string #group2 .container {
+    width: 700px;
+  }
+}
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  #string #group2 .container {
+    width: 100%;
+  }
+}
 #string #group4.parallax__group {
   height: 700px;
 }
@@ -340,13 +368,68 @@ body {
   content: "";
   background: url(themes/string/assets/parallax_image_2.png) no-repeat center center;
   background-size: cover;
-  opacity: 0.5;
+  opacity: 0.1;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
   z-index: -1;
+}
+#string #group4 .column {
+  display: table-cell;
+  vertical-align: middle;
+}
+#string #group4 .column p {
+  text-align: center;
+}
+#string #group4 .column .square-2 p {
+  padding: 0 10px;
+}
+#string #group4 .column .dots-bg::after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  top: -55px;
+  left: -6px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+#string #group4 .column .hex-1::after {
+  background: url(themes/string/assets/dot-bg-hex.svg) no-repeat center center;
+  background-size: 90%;
+}
+@media only screen and (max-width: 1400px) and (min-width: 992px) {
+  #string #group4 .column .hex-1::after {
+    background-size: 80%;
+    top: -89px;
+    left: -11px;
+  }
+}
+#string #group4 .column .hex-2::after {
+  background: url(themes/string/assets/dot-bg-hex.svg) no-repeat center center;
+  background-size: 90%;
+}
+@media only screen and (max-width: 1400px) and (min-width: 992px) {
+  #string #group4 .column .hex-2::after {
+    background-size: 80%;
+    top: -89px;
+    left: -11px;
+  }
+}
+#string #group4 .column .circle::after {
+  background: url(themes/string/assets/dot-bg-circle.svg) no-repeat center center;
+  background-size: 90%;
+}
+#string #group4 .column .square-1::after {
+  background: url(themes/string/assets/dot-bg-sqaure.svg) no-repeat center center;
+  background-size: 85%;
+}
+#string #group4 .column .square-2::after {
+  background: url(themes/string/assets/dot-bg-sqaure.svg) no-repeat center center;
+  background-size: 85%;
 }
 #string #group5 .parallax__layer--base {
   background: #768e98;

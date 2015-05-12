@@ -13,14 +13,21 @@
 @googleProtocol    : 'https://';
 @googleFontRequest : '@{googleFontName}:@{googleFontSizes}&subset=@{googleSubset}';
 
+/*-------------------
+      Base Sizes
+--------------------*/
+
+@emSize   : 16px;
+@fontSize : 16px;
 
 /*-------------------
      Page Heading
 --------------------*/
 @headerFontWeight : 300;
-@headerLineHeight : 1.4em;
+@headerLineHeight : 1.5em;
 
-@h1               : 2.3rem;
+@h1               : 2rem;
+@h2               : 1.5rem;
 
 /*-------------------
       Site Colors

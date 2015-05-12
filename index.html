@@ -10,7 +10,6 @@
   <title>String</title>
 
   <link rel="stylesheet" type="text/css" href="dist/semantic.css">
-  <link rel="stylesheet" type="text/css" href="homepage.css">
 
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
   <script src="dist/semantic.js"></script>
@@ -28,30 +27,34 @@
       <div class="container">
         <div class="logo">
           <img src="dist/themes/string/assets/main_gif.gif" alt="String Logo">
+          <img class="string-txt" src="dist/themes/string/assets/string-logo.png" alt="String Logo">
         </div>
         
         <div class="intro-txt">
-          <h1>String helps students learn more by allowing them to create structures full of content that link information together and make it more understandable.</h1>
+          <div class="intro-pad">
+            <h1>Opening minds in a world of information</h1>
+            <h2>The platform that Strings together information to make it make sense</h2>
+          </div>
 
         
           <div class="ui page grid">
             <div class="three column row">
               <div class="column">
-                <i class="huge home icon"></i>
+                <img src="dist/themes/string/assets/header-icons-01.svg" alt="">
 
-                <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>String creates structures full of content that link information together and make it more understandable.</p>
               </div>
               
               <div class="column">
-                <i class="huge alarm icon"></i>
+                <img src="dist/themes/string/assets/header-icons-02.svg" alt="">
 
-                <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>It opens doorways to new information, new connections and different perspectives.</p>
               </div>
 
               <div class="column">
-                <i class="huge mail outline icon"></i>
+                <img src="dist/themes/string/assets/header-icons-03.svg" alt="">
 
-                <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <p>It's proven to help students remember more and gain a&nbsp;deeper understanding of topics, improving their performance in exams.</p>
               </div>
             </div>
           </div>
@@ -74,7 +77,9 @@
       <div class="parallax__layer parallax__layer--fore">
 
         <div class="container">
-          <div class="ui video" data-source="youtube" data-id="i_mKY2CQ9Kk" data-image="/images/cat.jpg"></div>
+
+          <div class="ui video" data-source="vimeo" data-id="127513922" data-image="dist/themes/string/assets/parallax_image_2.png"></div>
+
         </div>
 
       </div>
@@ -84,17 +89,35 @@
 
     <!-- END OF VIDEO SECTION -->
 
-    <!-- STRING VISUAL -->
+    <!-- STRING INFO -->
 
     <div id="group4" class="parallax__group">
     
-      <div class="parallax__layer parallax__layer--base"></div>
+      <div class="parallax__layer parallax__layer--base">
+        <class class="container">
+          <div class="ui page grid">
+            <div class="five column equal height row">
+              <div class="column dots-bg hex-1">
+                <p>Web-based</p>
+              </div>
+
+              <div class="column dots-bg circle">
+                <p>Accessible on any desktop or tablet</p>
+              </div>
+
+              <div class="column dots-bg hex-2"><p>String any subject imaginable</p></div>
+              <div class="column dots-bg square-1"><p>Include deep content such as video, images and text</p></div>
+              <div class="column dots-bg square-2"><p>£19.99 per year (no purchase required vto register interest)</p></div>
+            </div>
+          </div>
+        </class>
+      </div>
     
       <div class="parallax__layer parallax__layer--back"></div>
 
     </div>
 
-    <!-- END OF STRING VISUAL-->
+    <!-- END OF STRING INFO-->
 
     <!-- REGISTER  -->
 
@@ -144,7 +167,12 @@
   </div>
 
 
+<script>
 
+    $('.ui.video').video();
+
+
+</script>
 </body>
 
 </html>

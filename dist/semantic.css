@@ -520,7 +520,7 @@ body {
 }
 
 html {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 body {
@@ -529,7 +529,7 @@ body {
   min-width: 320px;
   background: #768e98;
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.4em;
   color: #ffffff;
   font-smoothing: antialiased;
@@ -545,20 +545,20 @@ h3,
 h4,
 h5 {
   font-family: 'Open Sans', sans-serif;
-  line-height: 1.4em;
-  margin: -webkit-calc(2rem -  0.2em ) 0em 1rem;
-  margin: calc(2rem -  0.2em ) 0em 1rem;
+  line-height: 1.5em;
+  margin: -webkit-calc(2rem -  0.25em ) 0em 1rem;
+  margin: calc(2rem -  0.25em ) 0em 1rem;
   font-weight: 300;
   padding: 0em;
 }
 
 h1 {
   min-height: 1rem;
-  font-size: 2.3rem;
+  font-size: 2rem;
 }
 
 h2 {
-  font-size: 1.714rem;
+  font-size: 1.5rem;
 }
 
 h3 {
@@ -686,10 +686,7 @@ body {
        Video
 --------------------*/
   /*-------------------
-     Information
---------------------*/
-  /*-------------------
-     String Visual
+     String Info
 --------------------*/
   /*-------------------
      Information
@@ -702,12 +699,21 @@ body {
   left: 50%;
   top: 50%;
   padding: 2em;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  width: 1000px;
 }
 
-@media only screen and (max-width: 1920px) and (min-width: 992px) {
+@media only screen and (max-width: 1920px) and (min-width: 1400px) {
+  #string .container {
+    width: 1000px;
+  }
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 992px) {
   #string .container {
     width: 850px;
   }
@@ -788,18 +794,20 @@ body {
   margin-bottom: 5em;
 }
 
+#string #group1 .logo img {
+  vertical-align: middle;
+}
+
+#string #group1 .logo .string-txt {
+  padding: 20px 0 0 25px;
+  height: 100px;
+}
+
 #string #group1 .intro-txt {
   color: #ffffff;
 }
 
-#string #group1 .intro-txt h1 {
-  font-size: 2.3rem;
-  font-weight: 300;
-  line-height: 1.4em;
-  margin-bottom: 2em;
-}
-
-#string #group1 .intro-txt i {
+#string #group1 .intro-txt img {
   text-align: center;
   margin: 0 0 2rem 50%;
   -webkit-transform: translate(-50%, 0);
@@ -808,9 +816,17 @@ body {
 }
 
 #string #group1 .intro-txt p {
-  font-size: 1.2em;
+  text-align: center;
   line-height: 1.4em;
-  text-align: left;
+}
+
+#string #group1 .intro-txt .intro-pad {
+  margin-bottom: 5rem;
+}
+
+#string #group1 .intro-txt .intro-pad h1,
+#string #group1 .intro-txt .intro-pad h2 {
+  margin: 0;
 }
 
 #string #group1 .parallax__layer--back {
@@ -841,6 +857,28 @@ body {
   z-index: -1;
 }
 
+#string #group2 .container {
+  width: 1100px;
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 992px) {
+  #string #group2 .container {
+    width: 900px;
+  }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  #string #group2 .container {
+    width: 700px;
+  }
+}
+
+@media only screen and (max-width: 768px) and (min-width: 320px) {
+  #string #group2 .container {
+    width: 100%;
+  }
+}
+
 #string #group4.parallax__group {
   height: 700px;
 }
@@ -859,13 +897,79 @@ body {
   content: "";
   background: url("themes/string/assets/parallax_image_2.png") no-repeat center center;
   background-size: cover;
-  opacity: 0.5;
+  opacity: 0.1;
   top: 0;
   left: 0;
   bottom: 0;
   right: 0;
   position: absolute;
   z-index: -1;
+}
+
+#string #group4 .column {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#string #group4 .column p {
+  text-align: center;
+}
+
+#string #group4 .column .square-2 p {
+  padding: 0 10px;
+}
+
+#string #group4 .column .dots-bg::after {
+  content: "";
+  width: 200px;
+  height: 200px;
+  top: -55px;
+  left: -6px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+#string #group4 .column .hex-1::after {
+  background: url("themes/string/assets/dot-bg-hex.svg") no-repeat center center;
+  background-size: 90%;
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 992px) {
+  #string #group4 .column .hex-1::after {
+    background-size: 80%;
+    top: -89px;
+    left: -11px;
+  }
+}
+
+#string #group4 .column .hex-2::after {
+  background: url("themes/string/assets/dot-bg-hex.svg") no-repeat center center;
+  background-size: 90%;
+}
+
+@media only screen and (max-width: 1400px) and (min-width: 992px) {
+  #string #group4 .column .hex-2::after {
+    background-size: 80%;
+    top: -89px;
+    left: -11px;
+  }
+}
+
+#string #group4 .column .circle::after {
+  background: url("themes/string/assets/dot-bg-circle.svg") no-repeat center center;
+  background-size: 90%;
+}
+
+#string #group4 .column .square-1::after {
+  background: url("themes/string/assets/dot-bg-sqaure.svg") no-repeat center center;
+  background-size: 85%;
+}
+
+#string #group4 .column .square-2::after {
+  background: url("themes/string/assets/dot-bg-sqaure.svg") no-repeat center center;
+  background-size: 85%;
 }
 
 #string #group5 .parallax__layer--base {
@@ -1512,19 +1616,19 @@ body {
 .ui.mini.buttons .button,
 .ui.mini.buttons .or,
 .ui.mini.button {
-  font-size: 0.71428571rem;
+  font-size: 0.6875rem;
 }
 
 .ui.tiny.buttons .button,
 .ui.tiny.buttons .or,
 .ui.tiny.button {
-  font-size: 0.85714286rem;
+  font-size: 0.875rem;
 }
 
 .ui.small.buttons .button,
 .ui.small.buttons .or,
 .ui.small.button {
-  font-size: 0.92857143rem;
+  font-size: 0.9375rem;
 }
 
 .ui.buttons .button,
@@ -1536,25 +1640,25 @@ body {
 .ui.large.buttons .button,
 .ui.large.buttons .or,
 .ui.large.button {
-  font-size: 1.14285714rem;
+  font-size: 1.125rem;
 }
 
 .ui.big.buttons .button,
 .ui.big.buttons .or,
 .ui.big.button {
-  font-size: 1.28571429rem;
+  font-size: 1.3125rem;
 }
 
 .ui.huge.buttons .button,
 .ui.huge.buttons .or,
 .ui.huge.button {
-  font-size: 1.42857143rem;
+  font-size: 1.4375rem;
 }
 
 .ui.massive.buttons .button,
 .ui.massive.buttons .or,
 .ui.massive.button {
-  font-size: 1.71428571rem;
+  font-size: 1.6875rem;
 }
 
 /*--------------
@@ -5122,18 +5226,18 @@ i.flag.zimbabwe:before {
 
 .ui.header {
   border: none;
-  margin: -webkit-calc(2rem -  0.2em ) 0em 1rem;
-  margin: calc(2rem -  0.2em ) 0em 1rem;
+  margin: -webkit-calc(2rem -  0.25em ) 0em 1rem;
+  margin: calc(2rem -  0.25em ) 0em 1rem;
   padding: 0em 0em;
   font-family: 'Open Sans', sans-serif;
   font-weight: 300;
-  line-height: 1.4em;
+  line-height: 1.5em;
   text-transform: none;
   color: #ffffff;
 }
 
 .ui.header:first-child {
-  margin-top: -0.2em;
+  margin-top: -0.25em;
 }
 
 .ui.header:last-child {
@@ -5161,7 +5265,7 @@ i.flag.zimbabwe:before {
   display: table-cell;
   opacity: 1;
   font-size: 1.5em;
-  padding-top: 0.2em;
+  padding-top: 0.25em;
   vertical-align: middle;
 }
 
@@ -5180,7 +5284,7 @@ i.flag.zimbabwe:before {
 .ui.header > .image,
 .ui.header > img {
   display: inline-block;
-  margin-top: 0.2em;
+  margin-top: 0.25em;
   width: 2.5em;
   height: auto;
   vertical-align: middle;
@@ -5241,11 +5345,11 @@ i.flag.zimbabwe:before {
 ---------------*/
 
 h1.ui.header {
-  font-size: 2.3rem;
+  font-size: 2rem;
 }
 
 h2.ui.header {
-  font-size: 1.714rem;
+  font-size: 1.5rem;
 }
 
 h3.ui.header {
@@ -5288,11 +5392,11 @@ h5.ui.header .sub.header {
 
 .ui.huge.header {
   min-height: 1em;
-  font-size: 2.3em;
+  font-size: 2em;
 }
 
 .ui.large.header {
-  font-size: 1.714em;
+  font-size: 1.5em;
 }
 
 .ui.medium.header {
@@ -5710,11 +5814,11 @@ a.ui.inverted.yellow.header:hover {
 }
 
 .ui.large.block.header {
-  font-size: 1.714em;
+  font-size: 1.5em;
 }
 
 .ui.huge.block.header {
-  font-size: 2.3em;
+  font-size: 2em;
 }
 
 /*-------------------
@@ -9178,7 +9282,7 @@ img.ui.bordered.image {
 .ui.mini.image {
   width: 20px;
   height: auto;
-  font-size: 0.71428571rem;
+  font-size: 0.6875rem;
 }
 
 .ui.tiny.images .image,
@@ -9187,7 +9291,7 @@ img.ui.bordered.image {
 .ui.tiny.image {
   width: 80px;
   height: auto;
-  font-size: 0.85714286rem;
+  font-size: 0.875rem;
 }
 
 .ui.small.images .image,
@@ -9196,7 +9300,7 @@ img.ui.bordered.image {
 .ui.small.image {
   width: 150px;
   height: auto;
-  font-size: 0.92857143rem;
+  font-size: 0.9375rem;
 }
 
 .ui.medium.images .image,
@@ -9214,7 +9318,7 @@ img.ui.bordered.image {
 .ui.large.image {
   width: 450px;
   height: auto;
-  font-size: 1.14285714rem;
+  font-size: 1.125rem;
 }
 
 .ui.big.images .image,
@@ -9223,7 +9327,7 @@ img.ui.bordered.image {
 .ui.big.image {
   width: 600px;
   height: auto;
-  font-size: 1.28571429rem;
+  font-size: 1.3125rem;
 }
 
 .ui.huge.images .image,
@@ -9232,7 +9336,7 @@ img.ui.bordered.image {
 .ui.huge.image {
   width: 800px;
   height: auto;
-  font-size: 1.42857143rem;
+  font-size: 1.4375rem;
 }
 
 .ui.massive.images .image,
@@ -9241,7 +9345,7 @@ img.ui.bordered.image {
 .ui.massive.image {
   width: 960px;
   height: auto;
-  font-size: 1.71428571rem;
+  font-size: 1.6875rem;
 }
 
 /*******************************
@@ -9725,11 +9829,11 @@ img.ui.bordered.image {
 ---------------------*/
 
 .ui.mini.input {
-  font-size: 0.71428571em;
+  font-size: 0.6875em;
 }
 
 .ui.small.input {
-  font-size: 0.92857143em;
+  font-size: 0.9375em;
 }
 
 .ui.input {
@@ -9737,19 +9841,19 @@ img.ui.bordered.image {
 }
 
 .ui.large.input {
-  font-size: 1.14285714em;
+  font-size: 1.125em;
 }
 
 .ui.big.input {
-  font-size: 1.28571429em;
+  font-size: 1.3125em;
 }
 
 .ui.huge.input {
-  font-size: 1.42857143em;
+  font-size: 1.4375em;
 }
 
 .ui.massive.input {
-  font-size: 1.71428571em;
+  font-size: 1.6875em;
 }
 
 /*******************************
@@ -11727,15 +11831,15 @@ ol.ui.horizontal.list li:before,
 --------------------*/
 
 .ui.mini.list {
-  font-size: 0.71428571em;
+  font-size: 0.6875em;
 }
 
 .ui.tiny.list {
-  font-size: 0.85714286em;
+  font-size: 0.875em;
 }
 
 .ui.small.list {
-  font-size: 0.92857143em;
+  font-size: 0.9375em;
 }
 
 .ui.list {
@@ -11743,34 +11847,34 @@ ol.ui.horizontal.list li:before,
 }
 
 .ui.large.list {
-  font-size: 1.14285714em;
+  font-size: 1.125em;
 }
 
 .ui.big.list {
-  font-size: 1.28571429em;
+  font-size: 1.3125em;
 }
 
 .ui.huge.list {
-  font-size: 1.42857143em;
+  font-size: 1.4375em;
 }
 
 .ui.massive.list {
-  font-size: 1.71428571em;
+  font-size: 1.6875em;
 }
 
 .ui.mini.horizontal.list .list > .item,
 .ui.mini.horizontal.list > .item {
-  font-size: 0.71428571rem;
+  font-size: 0.6875rem;
 }
 
 .ui.tiny.horizontal.list .list > .item,
 .ui.tiny.horizontal.list > .item {
-  font-size: 0.85714286rem;
+  font-size: 0.875rem;
 }
 
 .ui.small.horizontal.list .list > .item,
 .ui.small.horizontal.list > .item {
-  font-size: 0.92857143rem;
+  font-size: 0.9375rem;
 }
 
 .ui.horizontal.list .list > .item,
@@ -11780,22 +11884,22 @@ ol.ui.horizontal.list li:before,
 
 .ui.large.horizontal.list .list > .item,
 .ui.large.horizontal.list > .item {
-  font-size: 1.14285714rem;
+  font-size: 1.125rem;
 }
 
 .ui.big.horizontal.list .list > .item,
 .ui.big.horizontal.list > .item {
-  font-size: 1.28571429rem;
+  font-size: 1.3125rem;
 }
 
 .ui.huge.horizontal.list .list > .item,
 .ui.huge.horizontal.list > .item {
-  font-size: 1.42857143rem;
+  font-size: 1.4375rem;
 }
 
 .ui.massive.horizontal.list .list > .item,
 .ui.massive.horizontal.list > .item {
-  font-size: 1.71428571rem;
+  font-size: 1.6875rem;
 }
 
 /*******************************
@@ -13692,7 +13796,7 @@ ol.ui.horizontal.list li:before,
 
 .ui.small.step,
 .ui.small.steps .step {
-  font-size: 0.92857143rem;
+  font-size: 0.9375rem;
 }
 
 .ui.step,
@@ -13702,7 +13806,7 @@ ol.ui.horizontal.list li:before,
 
 .ui.large.step,
 .ui.large.steps .step {
-  font-size: 1.14285714rem;
+  font-size: 1.125rem;
 }
 
 /*******************************
@@ -13781,7 +13885,7 @@ ol.ui.horizontal.list li:before,
 /* Icon Divider */
 
 .ui.breadcrumb .icon.divider {
-  font-size: 0.85714286em;
+  font-size: 0.875em;
   vertical-align: baseline;
 }
 
@@ -19184,7 +19288,7 @@ ol.ui.horizontal.list li:before,
 ---------------*/
 
 .ui.small.message {
-  font-size: 0.92857143em;
+  font-size: 0.9375em;
 }
 
 .ui.message {
@@ -19192,15 +19296,15 @@ ol.ui.horizontal.list li:before,
 }
 
 .ui.large.message {
-  font-size: 1.14285714em;
+  font-size: 1.125em;
 }
 
 .ui.huge.message {
-  font-size: 1.42857143em;
+  font-size: 1.4375em;
 }
 
 .ui.massive.message {
-  font-size: 1.71428571em;
+  font-size: 1.6875em;
 }
 
 /*******************************
@@ -24261,7 +24365,7 @@ body.dimmed.dimmable > :not(.dimmer) {
   border-top: none;
   line-height: 1em;
   color: #ffffff;
-  padding: 0.71428571em 1.14285714em !important;
+  padding: 0.6875em 1.125em !important;
   font-size: 1rem;
   text-transform: none;
   font-weight: normal;
@@ -24304,7 +24408,7 @@ body.dimmed.dimmable > :not(.dimmer) {
 
 .ui.dropdown .menu > .header {
   margin: 1rem 0rem 0.75rem;
-  padding: 0em 1.14285714em;
+  padding: 0em 1.125em;
   color: rgba(0, 0, 0, 0.85);
   font-size: 0.7857rem;
   font-weight: bold;
@@ -24318,7 +24422,7 @@ body.dimmed.dimmable > :not(.dimmer) {
 }
 
 .ui.dropdown .menu > .input {
-  margin: 0.75rem 1.14285714em;
+  margin: 0.75rem 1.125em;
   min-width: 200px;
 }
 
@@ -24564,25 +24668,25 @@ select.ui.dropdown {
 
 @media only screen and (max-width: 767px) {
   .ui.selection.dropdown .menu {
-    max-height: 7.49991429em;
+    max-height: 7.3392em;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .ui.selection.dropdown .menu {
-    max-height: 9.99988571em;
+    max-height: 9.7856em;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .ui.selection.dropdown .menu {
-    max-height: 14.99982857em;
+    max-height: 14.6784em;
   }
 }
 
 @media only screen and (min-width: 1920px) {
   .ui.selection.dropdown .menu {
-    max-height: 19.99977143em;
+    max-height: 19.5712em;
   }
 }
 
@@ -24590,7 +24694,7 @@ select.ui.dropdown {
 
 .ui.selection.dropdown .menu > .item {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
-  padding: 0.71428571em 1.14285714em !important;
+  padding: 0.6875em 1.125em !important;
   white-space: normal;
   word-wrap: normal;
 }
@@ -24735,25 +24839,25 @@ select.ui.dropdown {
 
 @media only screen and (max-width: 767px) {
   .ui.search.dropdown .menu {
-    max-height: 7.49991429em;
+    max-height: 7.3392em;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .ui.search.dropdown .menu {
-    max-height: 9.99988571em;
+    max-height: 9.7856em;
   }
 }
 
 @media only screen and (min-width: 992px) {
   .ui.search.dropdown .menu {
-    max-height: 14.99982857em;
+    max-height: 14.6784em;
   }
 }
 
 @media only screen and (min-width: 1920px) {
   .ui.search.dropdown .menu {
-    max-height: 19.99977143em;
+    max-height: 19.5712em;
   }
 }
 
@@ -26741,7 +26845,7 @@ a.ui.nag {
 ---------------*/
 
 .ui.tiny.progress {
-  font-size: 0.85714286rem;
+  font-size: 0.875rem;
 }
 
 .ui.tiny.progress .bar {
@@ -26749,7 +26853,7 @@ a.ui.nag {
 }
 
 .ui.small.progress {
-  font-size: 0.92857143rem;
+  font-size: 0.9375rem;
 }
 
 .ui.small.progress .bar {
@@ -26765,7 +26869,7 @@ a.ui.nag {
 }
 
 .ui.large.progress {
-  font-size: 1.14285714rem;
+  font-size: 1.125rem;
 }
 
 .ui.large.progress .bar {
@@ -26773,7 +26877,7 @@ a.ui.nag {
 }
 
 .ui.big.progress {
-  font-size: 1.28571429rem;
+  font-size: 1.3125rem;
 }
 
 .ui.big.progress .bar {

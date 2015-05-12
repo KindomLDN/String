@@ -17,10 +17,16 @@ body {
 		left: 50%;
 		top: 50%;
 		padding: 2em;
+		transition: all 0.5s ease;
 		-webkit-transform: translate(-50%, -50%);
 		transform: translate(-50%, -50%);
+		width: 1000px;
 
-		@media only screen and (max-width: @widescreenMonitorBreakpoint) and (min-width: @computerBreakpoint) {
+		@media only screen and (max-width: @widescreenMonitorBreakpoint) and (min-width: @largeMonitorBreakpoint) {
+			width: 1000px;
+		}
+
+		@media only screen and (max-width: @largeMonitorBreakpoint) and (min-width: @computerBreakpoint) {
 			width: 850px;
 		}
 
@@ -105,20 +111,23 @@ body {
 
 		.logo {
 			margin-bottom: 5em;
+
+			img {
+				vertical-align: middle;
+			}
+
+			.string-txt {
+				padding: 20px 0 0 25px;
+				height: 100px;
+			}
+
 		}
 
 
 		.intro-txt {
 			color: @white;
 
-			h1 {
-				font-size: @h1;
-				font-weight: 300;
-				line-height: 1.4em;
-				margin-bottom: 2em;
-			}
-
-			i {
+			img {
 				text-align: center;
 				margin: 0 0 2rem 50%;
 				-webkit-transform: translate(-50%, 0);
@@ -127,9 +136,16 @@ body {
 			}
 
 			p {
-				font-size: 1.2em;
+				text-align: center;
 				line-height: 1.4em;
-				text-align: left;
+			}
+
+			.intro-pad {
+				margin-bottom: 5rem;
+
+				h1, h2 {
+					margin: 0;
+				}
 			}
 		}
 
@@ -192,14 +208,30 @@ body {
 			z-index: -1;
 		}
 
+		.container {
+			width: 1100px;
+
+			// @media only screen and (max-width: @widescreenMonitorBreakpoint) and (min-width: @largeMonitorBreakpoint) {
+			// 	width: 1100px;
+			// }
+
+			@media only screen and (max-width: @largeMonitorBreakpoint) and (min-width: @computerBreakpoint) {
+				width: 900px;
+			}
+
+			@media only screen and (max-width: @computerBreakpoint) and (min-width: @tabletBreakpoint) {
+				width: 700px;
+			}
+
+			@media only screen and (max-width: @tabletBreakpoint) and (min-width: @mobileBreakpoint) {
+				width: 100%;
+			}
+		}
+
 	}
 
 /*-------------------
-     Information
---------------------*/
-
-/*-------------------
-     String Visual
+     String Info
 --------------------*/
 
 	#group4.parallax__group {
@@ -210,13 +242,11 @@ body {
 
 		.parallax__layer--base {
 			height: 700px;
-
 		}
 
 		.parallax__layer--back {
 			height: 100vh;
 			background: @bluegrad;
-
 		}
 
 		.parallax__layer--back::after {
@@ -226,13 +256,81 @@ body {
 			-moz-background-size: cover;
 			-o-background-size: cover;
 			background-size: cover;
-			opacity: 0.5;
+			opacity: 0.1;
 			top: 0;
 			left: 0;
 			bottom: 0;
 			right: 0;
 			position: absolute;
 			z-index: -1;		
+		}
+
+		.column {
+			display: table-cell;
+  			vertical-align: middle;
+
+			p {
+				text-align: center;
+			}
+
+			.square-2 {
+				p {
+					padding: 0 10px;
+				}
+			}
+
+			.dots-bg::after {
+				content: "";
+				width: 200px;
+				height: 200px;
+				top: -55px;
+				left: -6px;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				z-index: -1;
+			}
+			
+			.hex-1::after {
+				background: url(themes/string/assets/dot-bg-hex.svg) no-repeat center center;
+				background-size:90%;
+
+
+				@media only screen and (max-width: @largeMonitorBreakpoint) and (min-width: @computerBreakpoint) {
+					background-size:80%;
+					top: -89px;
+					left: -11px;
+				}
+			}
+
+			.hex-2::after {
+				background: url(themes/string/assets/dot-bg-hex.svg) no-repeat center center;
+				background-size:90%;
+
+				@media only screen and (max-width: @largeMonitorBreakpoint) and (min-width: @computerBreakpoint) {
+					background-size:80%;
+					top: -89px;
+					left: -11px;
+				}
+			}
+
+			.circle::after {
+				background: url(themes/string/assets/dot-bg-circle.svg) no-repeat center center;
+				background-size: 90%;
+
+			}
+
+			.square-1::after {
+				background: url(themes/string/assets/dot-bg-sqaure.svg) no-repeat center center;
+				background-size: 85%;
+
+			}
+
+			.square-2::after {
+				background: url(themes/string/assets/dot-bg-sqaure.svg) no-repeat center center;
+				background-size: 85%;
+
+			}
 		}
 	}
 
