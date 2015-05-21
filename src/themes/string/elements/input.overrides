@@ -1,0 +1,17 @@
+/*******************************
+         Theme Overrides
+*******************************/
+
+.ui.input input {
+	width: 100%;
+	font-weight: 300;
+
+
+	@media only screen and (max-width: @largeMonitorBreakpoint) and (min-width: @computerBreakpoint) {
+		width: 780px;
+	}
+
+	@media only screen and (max-width: @widescreenMonitorBreakpoint) and (min-width: @largeMonitorBreakpoint) {
+		width: 900px;
+	}
+}

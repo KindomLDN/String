@@ -45,9 +45,9 @@ h3,
 h4,
 h5 {
   font-family: 'Open Sans', sans-serif;
-  line-height: 1.5em;
-  margin: -webkit-calc(2rem -  0.25em ) 0em 1rem;
-  margin: calc(2rem -  0.25em ) 0em 1rem;
+  line-height: 1.4em;
+  margin: -webkit-calc(2rem -  0.2em ) 0em 1rem;
+  margin: calc(2rem -  0.2em ) 0em 1rem;
   font-weight: 300;
   padding: 0em;
 }
@@ -173,6 +173,11 @@ body {
 
   
 /*-------------------
+       BG Dots
+--------------------*/
+
+  
+/*-------------------
        Intro
 --------------------*/
 
@@ -190,7 +195,7 @@ body {
 
   
 /*-------------------
-     Information
+     Registration
 --------------------*/
 
   
@@ -223,12 +228,12 @@ body {
     width: 700px;
   }
 }
-@media only screen and (max-width: 768px) and (min-width: 320px) {
+@media only screen and (max-width: 768px) and (min-width: 414px) {
   #string .container {
     width: 600px;
   }
 }
-@media only screen and (max-width: 320px) and (min-width: 320px) {
+@media only screen and (max-width: 414px) {
   #string .container {
     width: 100%;
   }
@@ -273,6 +278,56 @@ body {
   -webkit-transition: -webkit-transform 0.5s;
   transition: transform 0.5s;
 }
+#string .string-bg-dots {
+  background: url(themes/string/assets/background_dots.png) no-repeat center center;
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  z-index: -1;
+  opacity: 0.4;
+  -webkit-transition: all 0.5s ease;
+          transition: all 0.5s ease;
+}
+@media only screen and (max-width: 1400px) and (min-width: 992px) {
+  #string .string-bg-dots {
+    width: 300px;
+    height: 300px;
+    background-size: 300px;
+  }
+}
+@media only screen and (max-width: 992px) {
+  #string .string-bg-dots {
+    display: none;
+  }
+}
+#string .string-bg-dots.left {
+  top: 0;
+  left: 0;
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+      transform: scaleX(-1);
+  -webkit-filter: FlipH;
+          filter: FlipH;
+  -ms-filter: "FlipH";
+}
+#string .string-bg-dots.left.bottom {
+  top: initial;
+  bottom: 0;
+  -webkit-transform: scaleX(-1) scale(1, -1);
+  -ms-transform: scaleX(-1) scale(1, -1);
+      transform: scaleX(-1) scale(1, -1);
+}
+#string .string-bg-dots.right {
+  top: 0;
+  right: 0;
+}
+#string .string-bg-dots.right.bottom {
+  top: initial;
+  bottom: 0;
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+      transform: scale(1, -1);
+}
 #string #group1 {
   z-index: 3;
   text-align: center;
@@ -311,23 +366,24 @@ body {
   margin: 0;
 }
 #string #group1 .parallax__layer--back {
-  
-/* Changing BG Colour Effect */
   background: -webkit-linear-gradient(88deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
   background: linear-gradient(2deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
+  
+/* Changing BG Colour Effect */
 }
 #string #group2 {
   z-index: 4;
   text-align: center;
 }
 #string #group2 .parallax__layer--base {
-  background: #063b4b;
+  background: #17434e;
+  box-shadow: 0px 0px 20px 2px rgba(33, 51, 59, 0.5);
 }
 #string #group2 .parallax__layer--base::after {
   content: "";
-  background: url(themes/string/assets/article-2732361-1500F8CB000005DC-627_634x417.jpg) no-repeat center center;
+  background: url(themes/string/assets/video_background.jpg) no-repeat center center;
   background-size: cover;
-  opacity: 0.5;
+  opacity: 0.8;
   top: 0;
   left: 0;
   bottom: 0;
@@ -348,7 +404,7 @@ body {
     width: 700px;
   }
 }
-@media only screen and (max-width: 768px) and (min-width: 320px) {
+@media only screen and (max-width: 768px) {
   #string #group2 .container {
     width: 100%;
   }
@@ -376,63 +432,102 @@ body {
   position: absolute;
   z-index: -1;
 }
-#string #group4 .column {
-  display: table-cell;
-  vertical-align: middle;
+#string #group4 .header h1 {
+  text-align: center;
+  margin-bottom: 2em;
+}
+#string #group4 .first-string {
+  margin-bottom: 7rem;
+}
+#string #group4 .second-string {
+  margin-bottom: 5rem;
+}
+#string #group4 .ui.grid > .line::after {
+  content: "";
+  visibility: visible;
+  border: 2px solid #ffffff;
+  top: 50%;
+  left: 80px;
+  bottom: 0;
+  right: 80px;
+  position: absolute;
+  z-index: -2;
 }
 #string #group4 .column p {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 5em;
   text-align: center;
+  padding: 0 5em;
 }
-#string #group4 .column .square-2 p {
-  padding: 0 10px;
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+  #string #group4 .column p {
+    padding: 0 1em;
+  }
 }
-#string #group4 .column .dots-bg::after {
+@media only screen and (max-width: 1400px) and (min-width: 992px) {
+  #string #group4 .column p {
+    padding: 0 2em;
+  }
+}
+#string #group4 .column p span {
+  font-size: 0.8em;
+  line-height: 1.4em;
+}
+#string #group4 .dots-bg::after {
   content: "";
+  position: absolute;
+  z-index: -1;
   width: 200px;
   height: 200px;
-  top: -55px;
-  left: -6px;
-  position: absolute;
+  top: 50%;
+  left: 50%;
   bottom: 0;
   right: 0;
-  z-index: -1;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
 }
-#string #group4 .column .hex-1::after {
+#string #group4 .hex::after {
   background: url(themes/string/assets/dot-bg-hex.svg) no-repeat center center;
-  background-size: 90%;
+  background-size: 100%;
 }
-@media only screen and (max-width: 1400px) and (min-width: 992px) {
-  #string #group4 .column .hex-1::after {
-    background-size: 80%;
-    top: -89px;
-    left: -11px;
-  }
-}
-#string #group4 .column .hex-2::after {
-  background: url(themes/string/assets/dot-bg-hex.svg) no-repeat center center;
-  background-size: 90%;
-}
-@media only screen and (max-width: 1400px) and (min-width: 992px) {
-  #string #group4 .column .hex-2::after {
-    background-size: 80%;
-    top: -89px;
-    left: -11px;
-  }
-}
-#string #group4 .column .circle::after {
+#string #group4 .circle::after {
   background: url(themes/string/assets/dot-bg-circle.svg) no-repeat center center;
-  background-size: 90%;
+  background-size: 100%;
 }
-#string #group4 .column .square-1::after {
+#string #group4 .square::after {
   background: url(themes/string/assets/dot-bg-sqaure.svg) no-repeat center center;
-  background-size: 85%;
+  background-size: 100%;
 }
-#string #group4 .column .square-2::after {
-  background: url(themes/string/assets/dot-bg-sqaure.svg) no-repeat center center;
-  background-size: 85%;
+#string #group5 {
+  text-align: center;
 }
 #string #group5 .parallax__layer--base {
-  background: #768e98;
+  background: -webkit-linear-gradient(88deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
+  background: linear-gradient(2deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
+  box-shadow: 0px -3px 20px 2px rgba(33, 51, 59, 0.5);
+}
+#string #group5 .ui.input,
+#string #group5 .ui.button {
+  margin-top: 2em;
+}
+#string #group5 .ui.button {
+  margin-bottom: 2em;
+}
+#string #group5 .body-lrg {
+  font-size: 1.2em;
 }
 
 

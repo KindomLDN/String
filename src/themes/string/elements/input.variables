@@ -1,0 +1,25 @@
+/*******************************
+            Input
+*******************************/
+
+/*-------------------
+      Element
+--------------------*/
+
+@textAlign: center;
+@background: #b7c7cc;
+@borderWidth: 0;
+
+@inputColor: @darkblue;
+
+/*-------------------
+        States
+--------------------*/
+
+/* Placeholder */
+@placeholderColor: @unselectedTextColor;
+@placeholderFocusColor: @white;
+
+/* Focus */
+@focusBackground: @white;
+@focusColor: @darkblue;

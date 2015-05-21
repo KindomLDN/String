@@ -39,8 +39,8 @@
   border: none;
   border-radius: 0.2857rem;
   box-shadow: 0px 3px 0px 0px #d4d4d5, 0px 0px 0px 1px #d4d4d5;
-  -webkit-transition: box-shadow 0.2s ease;
-          transition: box-shadow 0.2s ease;
+  -webkit-transition: box-shadow 0.3s ease;
+          transition: box-shadow 0.3s ease;
   z-index: '';
 }
 .ui.card {
@@ -291,8 +291,8 @@
 .ui.cards > .card > .content a:not(.ui),
 .ui.card > .content a:not(.ui) {
   color: '';
-  -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  -webkit-transition: color 0.3s ease;
+          transition: color 0.3s ease;
 }
 .ui.cards > .card > .content a:not(.ui):hover,
 .ui.card > .content a:not(.ui):hover {
@@ -354,8 +354,8 @@
 .ui.card > .content .star.icon {
   cursor: pointer;
   opacity: 0.75;
-  -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  -webkit-transition: color 0.3s ease;
+          transition: color 0.3s ease;
 }
 .ui.cards > .card > .content .star.icon:hover,
 .ui.card > .content .star.icon:hover {
@@ -375,8 +375,8 @@
 .ui.card > .content .like.icon {
   cursor: pointer;
   opacity: 0.75;
-  -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  -webkit-transition: color 0.3s ease;
+          transition: color 0.3s ease;
 }
 .ui.cards > .card > .content .like.icon:hover,
 .ui.card > .content .like.icon:hover {
@@ -409,8 +409,8 @@
   left: 0em;
   color: rgba(0, 0, 0, 0.4);
   box-shadow: none;
-  -webkit-transition: color 0.2s ease;
-          transition: color 0.2s ease;
+  -webkit-transition: color 0.3s ease;
+          transition: color 0.3s ease;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 .ui.cards > .card > .extra a:not(.ui),
@@ -474,7 +474,7 @@ a.ui.card:hover,
 .ui.orange.cards > .card,
 .ui.cards > .orange.card,
 .ui.orange.card {
-  box-shadow: 0px 3px 0px 0px #e07b53, 0px 0px 0px 1px #d4d4d5;
+  box-shadow: 0px 3px 0px 0px #ffb900, 0px 0px 0px 1px #d4d4d5;
 }
 .ui.pink.cards > .card,
 .ui.cards > .pink.card,
@@ -521,7 +521,7 @@ a.ui.card:hover,
 .ui.orange.cards > .card:hover,
 .ui.cards > .orange.card:hover,
 .ui.orange.card:hover {
-  box-shadow: 0px 3px 0px 0px #e28560, 0px 0px 0px 1px #d4d4d5;
+  box-shadow: 0px 3px 0px 0px #ffbd0f, 0px 0px 0px 1px #d4d4d5;
 }
 .ui.pink.cards > .card:hover,
 .ui.cards > .pink.card:hover,

@@ -431,7 +431,7 @@
 
 
 /* Mobile Sizing Combinations */
-@media only screen and (min-width: 320px) and (max-width: 767px) {
+@media only screen and (min-width: 414px) and (max-width: 767px) {
   .ui.grid > .row > [class*="one wide mobile"].column,
   .ui.grid > .column.row > [class*="one wide mobile"].column,
   .ui.grid > [class*="one wide mobile"].column,
@@ -1367,7 +1367,7 @@
 }
 .ui.grid > .orange.row,
 .ui.grid > .row > .orange.column {
-  background-color: #e07b53 !important;
+  background-color: #ffb900 !important;
   color: #ffffff;
 }
 .ui.grid > .row > .orange.column {

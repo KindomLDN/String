@@ -9,10 +9,10 @@
   <!-- Site Properities -->
   <title>String</title>
 
-  <link rel="stylesheet" type="text/css" href="dist/semantic.css">
+  <link rel="stylesheet" type="text/css" href="dist/semantic.min.css">
 
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
-  <script src="dist/semantic.js"></script>
+  <script src="dist/semantic.min.js"></script>
 
 </head>
 <body id="string">
@@ -64,6 +64,8 @@
       </div>
 
       <div class="parallax__layer parallax__layer--back">
+        <div class="string-bg-dots left"></div>
+        <div class="string-bg-dots right"></div>
         <!-- <img src="dist/themes/string/assets/parallax_image_1.jpg" alt="Header BG"> -->
       </div>
 
@@ -78,7 +80,7 @@
 
         <div class="container">
 
-          <div class="ui video" data-source="vimeo" data-id="127513922" data-image="dist/themes/string/assets/parallax_image_2.png"></div>
+          <div class="ui video" data-source="vimeo" data-id="127513922" data-image="dist/themes/string/assets/video-cover.jpg"></div>
 
         </div>
 
@@ -94,23 +96,48 @@
     <div id="group4" class="parallax__group">
     
       <div class="parallax__layer parallax__layer--base">
-        <class class="container">
+        <div class="container">
           <div class="ui page grid">
-            <div class="five column equal height row">
-              <div class="column dots-bg hex-1">
+
+            <div class="ui one column row header">
+              <h1>Best Strings every year win funded university education</h1>
+            </div>
+
+            <div class="ui three column equal height row line first-string">
+
+              <div class="column dots-bg square">
+                <p>The perfect GCSE & A-level revision tool</p>
+              </div>
+
+              <div class="column dots-bg hex">
                 <p>Web-based</p>
               </div>
 
               <div class="column dots-bg circle">
                 <p>Accessible on any desktop or tablet</p>
               </div>
-
-              <div class="column dots-bg hex-2"><p>String any subject imaginable</p></div>
-              <div class="column dots-bg square-1"><p>Include deep content such as video, images and text</p></div>
-              <div class="column dots-bg square-2"><p>£19.99 per year (no purchase required vto register interest)</p></div>
             </div>
+
+            <div class="ui three column equal height row line second-string">
+              <div class="column dots-bg hex">
+                <p>String any subject imaginable</p>
+              </div>
+
+              <div class="column dots-bg square">
+                <p>Include deep content such as video, images and text</p>
+              </div>
+
+              <div class="column dots-bg square">
+                <div class="square-pad">
+                  <p>£19.99 per year <span>(no purchase required to register interest)</span></p>               
+                  <!-- <div class="small"><small>(no purchase required to register interest)</small></div> -->
+                </div>
+              </div>
+            </div>
+
+
           </div>
-        </class>
+        </div>
       </div>
     
       <div class="parallax__layer parallax__layer--back"></div>
@@ -125,40 +152,46 @@
 
       <div class="parallax__layer parallax__layer--fore">
         <div class="container">
-          <div class="logo">
-            <img src="dist/themes/string/assets/main_gif.gif" alt="String Logo">
-          </div>
-          
-          <div class="intro-txt">
-            <h1>String helps students learn more by allowing them to create structures full of content that link information together and make it more understandable.</h1>
+          <h1>Learn something new, using what you already know</h1>
+          <p class="body-lrg">Previously the preserve of the best schools, String’s creators are considering making it available at home. If it appeals, simply register your interest below. If enough people want it, one of the world's most innovative learning platforms will be available to you too…</p>
 
-          
-            <div class="ui page grid">
-              <div class="three column row">
-                <div class="column">
-                  <i class="huge home icon"></i>
+          <!-- Begin MailChimp Signup Form -->
 
-                  <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
-                </div>
+          <div id="mc_embed_signup">
+            <form action="http://gostringit.us10.list-manage.com/subscribe/post?u=fc1616d60d6c2cab07ee3fbbc&amp;id=cb1476ab19" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_self" novalidate>
                 
-                <div class="column">
-                  <i class="huge alarm icon"></i>
-
-                  <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+              <div id="mc_embed_signup_scroll">
+            
+                <div class="ui massive input">
+                  <input type="email" value="" name="EMAIL" id="mce-EMAIL" placeholder="enter your email address" onkeydown="if (event.keyCode == 13) { this.form.submit(); return false; }" required>
                 </div>
 
-                <div class="column">
-                  <i class="huge mail outline icon"></i>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_fc1616d60d6c2cab07ee3fbbc_cb1476ab19" tabindex="-1" value=""></div>
+                
 
-                  <p>Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+                <!-- <div class="inner-addon"> -->
+                  
+                  <!-- <input class="ui massive button" type="submit" value="Submit" name="subscribe" id="mc-embedded-subscribe"> -->
+                <!-- </div> -->
+                <div class="ui massive button" onclick="document.getElementById('mc-embedded-subscribe-form').submit(); return false;">
+                  <i class="mail outline icon"></i>
+                  Register
                 </div>
               </div>
-            </div>
+            </form>
           </div>
+
+          <!-- End mc_embed_signup -->
+
+          <p>We will email you if we make the platform available publicly and let you know how you can access it. We won't contact you for any other reason, nor will we share your email address with anyone else.</p>
         </div>
       </div>
 
-      <div class="parallax__layer parallax__layer--base"></div>
+      <div class="parallax__layer parallax__layer--base">
+        <div class="string-bg-dots bottom left"></div>
+        <div class="string-bg-dots bottom right"></div>
+      </div>
 
     </div>
 

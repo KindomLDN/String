@@ -25,7 +25,7 @@
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  color: #ffffff;
+  color: #17434e;
 }
 .ui.input input {
   margin: 0em;
@@ -36,16 +36,16 @@
           flex: 0 1 auto;
   outline: none;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-  text-align: left;
-  line-height: 1.2142em;
+  text-align: center;
+  line-height: 1.4em;
   font-family: 'Open Sans', sans-serif;
-  padding: 0.67861em 1em;
-  background: #ffffff;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  color: #ffffff;
+  padding: 0.58571em 1em;
+  background: #b7c7cc;
+  border: 0 solid rgba(0, 0, 0, 0.15);
+  color: #17434e;
   border-radius: 0.2857rem;
-  -webkit-transition: background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-          transition: background-color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  -webkit-transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+          transition: background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   box-shadow: none;
 }
 
@@ -125,7 +125,7 @@
 .ui.input input:focus {
   border-color: rgba(39, 41, 43, 0.3);
   background: #ffffff;
-  color: rgba(0, 0, 0, 0.8);
+  color: #17434e;
   box-shadow: none;
 }
 .ui.input.focus input::-webkit-input-placeholder,
@@ -262,7 +262,7 @@
 /* Left Icon Input */
 .ui[class*="left icon"].input > i.icon {
   right: auto;
-  left: 1px;
+  left: 0;
   border-radius: 0.2857rem 0em 0em 0.2857rem;
 }
 .ui[class*="left icon"].input > i.circular.icon {
@@ -322,8 +322,8 @@
 
 /* Corner Label */
 .ui.labeled.input .corner.label {
-  top: 1px;
-  right: 1px;
+  top: 0;
+  right: 0;
   font-size: 0.75em;
   border-radius: 0em 0.2857rem 0em 0em;
 }
@@ -444,6 +444,20 @@
          Theme Overrides
 *******************************/
 
+.ui.input input {
+  width: 100%;
+  font-weight: 300;
+}
+@media only screen and (max-width: 1400px) and (min-width: 992px) {
+  .ui.input input {
+    width: 780px;
+  }
+}
+@media only screen and (max-width: 1920px) and (min-width: 1400px) {
+  .ui.input input {
+    width: 900px;
+  }
+}
 
 
 /*******************************

@@ -21,14 +21,14 @@
   outline: none;
   border: none;
   vertical-align: baseline;
-  background-color: #e0e0e0;
+  background-color: #17434e;
   color: #ffffff;
   font-family: 'Open Sans', sans-serif;
   margin: 0em 0.25em 0em 0em;
   padding: 0.78571em 1.5em 0.78571em;
   text-transform: none;
   text-shadow: none;
-  font-weight: bold;
+  font-weight: 300;
   line-height: 1;
   font-style: normal;
   text-align: center;
@@ -40,8 +40,8 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  -webkit-transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
-          transition: opacity 0.1s ease, background-color 0.1s ease, color 0.1s ease, box-shadow 0.1s ease, background 0.1s ease;
+  -webkit-transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+          transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
   will-change: '';
   -webkit-tap-highlight-color: transparent;
 }
@@ -57,10 +57,10 @@
 ---------------*/
 
 .ui.button:hover {
-  background-color: #e8e8e8;
+  background-color: #ffb900;
   background-image: none;
   box-shadow: '';
-  color: rgba(0, 0, 0, 0.8);
+  color: #17434e;
 }
 .ui.button:hover .icon {
   opacity: 0.85;
@@ -125,8 +125,8 @@
   color: transparent !important;
   opacity: 1;
   pointer-events: none;
-  -webkit-transition: all 0s linear, opacity 0.2s ease;
-          transition: all 0s linear, opacity 0.2s ease;
+  -webkit-transition: all 0s linear, opacity 0.3s ease;
+          transition: all 0s linear, opacity 0.3s ease;
 }
 .ui.loading.button:before {
   position: absolute;
@@ -359,7 +359,7 @@
 .ui.inverted.button:hover {
   background: #ffffff;
   box-shadow: 0px 0px 0px 2px #ffffff inset !important;
-  color: rgba(0, 0, 0, 0.8);
+  color: #17434e;
 }
 
 /*-------------------
@@ -521,8 +521,8 @@
 .ui.button > .icon {
   opacity: 0.8;
   margin: 0em 0.4em 0em -0.2em;
-  -webkit-transition: opacity 0.2s ease;
-          transition: opacity 0.2s ease;
+  -webkit-transition: opacity 0.3s ease;
+          transition: opacity 0.3s ease;
   vertical-align: baseline;
   color: '';
 }
@@ -1487,7 +1487,7 @@
 
 .ui.orange.buttons .button,
 .ui.orange.button {
-  background-color: #e07b53;
+  background-color: #ffb900;
   color: #ffffff;
   text-shadow: none;
   background-image: none;
@@ -1497,13 +1497,13 @@
 }
 .ui.orange.buttons .button:hover,
 .ui.orange.button:hover {
-  background-color: #e28560;
+  background-color: #ffbd0f;
   color: #ffffff;
   text-shadow: none;
 }
 .ui.orange.buttons .button:active,
 .ui.orange.button:active {
-  background-color: #db6435;
+  background-color: #db9f00;
   color: #ffffff;
   text-shadow: none;
 }
@@ -1511,7 +1511,7 @@
 .ui.orange.buttons .active.button:active,
 .ui.orange.active.button,
 .ui.orange.button .active.button:active {
-  background-color: #dc6a3d;
+  background-color: #e6a700;
   color: #ffffff;
   text-shadow: none;
 }
@@ -1525,19 +1525,19 @@
 .ui.basic.orange.buttons .button:hover,
 .ui.basic.orange.button:hover {
   background: transparent !important;
-  box-shadow: 0px 0px 0px 2px #e28560 inset !important;
-  color: #e28560 !important;
+  box-shadow: 0px 0px 0px 2px #ffbd0f inset !important;
+  color: #ffbd0f !important;
 }
 .ui.basic.orange.buttons .button:active,
 .ui.basic.orange.button:active {
-  box-shadow: 0px 0px 0px 2px #db6435 inset !important;
-  color: #db6435 !important;
+  box-shadow: 0px 0px 0px 2px #db9f00 inset !important;
+  color: #db9f00 !important;
 }
 .ui.basic.orange.buttons .active.button,
 .ui.basic.orange.active.button {
   background: transparent !important;
-  box-shadow: 0px 0px 0px 2px #db6435 inset !important;
-  color: #db6435 !important;
+  box-shadow: 0px 0px 0px 2px #db9f00 inset !important;
+  color: #db9f00 !important;
 }
 .ui.buttons > .basic.orange.button:not(:first-child) {
   margin-left: -2px;

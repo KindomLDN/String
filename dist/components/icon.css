@@ -16,8 +16,8 @@
 
 @font-face {
   font-family: 'Icons';
-  src: url("../themes/default/assets/fonts/icons.eot");
-  src: url("../themes/default/assets/fonts/icons.eot?#iefix") format('embedded-opentype'), url("../themes/default/assets/fonts/icons.woff2") format('woff'), url("../themes/default/assets/fonts/icons.woff") format('woff'), url("../themes/default/assets/fonts/icons.ttf") format('truetype'), url("../themes/default/assets/fonts/icons.svg#icons") format('svg');
+  src: url("../themes/string/assets/fonts/icons.eot");
+  src: url("../themes/string/assets/fonts/icons.eot?#iefix") format('embedded-opentype'), url("../themes/string/assets/fonts/icons.woff2") format('woff'), url("../themes/string/assets/fonts/icons.woff") format('woff'), url("../themes/string/assets/fonts/icons.ttf") format('truetype'), url("../themes/string/assets/fonts/icons.svg#icons") format('svg');
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -114,8 +114,8 @@ i.disabled.icon {
 i.link.icon {
   cursor: pointer;
   opacity: 0.8;
-  -webkit-transition: opacity 0.2s ease;
-          transition: opacity 0.2s ease;
+  -webkit-transition: opacity 0.3s ease;
+          transition: opacity 0.3s ease;
 }
 i.link.icon:hover {
   opacity: 1 !important;
@@ -205,7 +205,7 @@ i.green.icon {
   color: #5bbd72 !important;
 }
 i.orange.icon {
-  color: #e07b53 !important;
+  color: #ffb900 !important;
 }
 i.pink.icon {
   color: #d9499a !important;
@@ -281,7 +281,7 @@ i.inverted.circular.green.icon {
 }
 i.inverted.bordered.orange.icon,
 i.inverted.circular.orange.icon {
-  background-color: #e07b53 !important;
+  background-color: #ffb900 !important;
   color: #FFFFFF !important;
 }
 i.inverted.bordered.pink.icon,

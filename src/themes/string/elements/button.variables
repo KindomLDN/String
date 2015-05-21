@@ -1,3 +1,32 @@
 /*******************************
             Button
 *******************************/
+
+/*-------------------
+       Element
+--------------------*/
+
+/* Style */
+@backgroundColor: @darkblue;
+
+/* Text */
+@fontWeight: 300;
+@textColor: @white;
+
+/* Transition */
+@transition:
+  opacity @transitionDuration @transitionEasing,
+  background-color @transitionDuration @transitionEasing,
+  color @transitionDuration @transitionEasing,
+  box-shadow @transitionDuration @transitionEasing,
+  background @transitionDuration @transitionEasing
+;
+
+/*-------------------
+        States
+--------------------*/
+
+@hoverBackgroundColor: @orange;
+@hoverColor: @darkblue;
+
+

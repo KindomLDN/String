@@ -24,7 +24,7 @@
      Page Heading
 --------------------*/
 @headerFontWeight : 300;
-@headerLineHeight : 1.5em;
+@headerLineHeight : 1.4em;
 
 @h1               : 2rem;
 @h2               : 1.5rem;
@@ -35,7 +35,9 @@
 
 /*---  Colors  ---*/
 @blue             : #768e98;
-@darkblue 		  : #063b4b;
+@darkblue 		  : #17434e;
+@orange           : #ffb900;
+
 
 /*---  Gradient  ---*/
 @bluegrad  		  : linear-gradient(2deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
@@ -55,3 +57,33 @@
 
 @lineHeight          : 1.4em;
 @textColor           : @white;
+
+/*-------------------
+     Transitions
+--------------------*/
+
+@transitionDuration : 0.3s;
+@transitionEasing   : ease;
+
+/*-------------------
+     Breakpoints
+--------------------*/
+
+@mobileBreakpoint            : 414px;
+@tabletBreakpoint            : 768px;
+@computerBreakpoint          : 992px;
+@largeMonitorBreakpoint      : 1400px;
+@widescreenMonitorBreakpoint : 1920px;
+
+/*******************************
+           Power-User
+*******************************/
+
+/*-------------------
+        Paths
+--------------------*/
+
+/* For source only. Modified in gulp for dist */
+@imagePath : '../../themes/string/assets/images';
+@fontPath  : '../../themes/string/assets/fonts';
+
