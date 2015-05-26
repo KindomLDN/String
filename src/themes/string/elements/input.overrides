@@ -6,12 +6,37 @@
 	width: 100%;
 	font-weight: 300;
 
+	@media only screen and (max-width: @mobileBreakpoint) {
+		padding-left: 0.5em;
+		padding-right: 0.5em;
+
+		&::-webkit-input-placeholder {
+			font-size: 1.2rem;
+		}
+
+		&:-moz-placeholder { /* Firefox 18- */
+			font-size: 1.2rem;  
+		}
+
+		&::-moz-placeholder {  /* Firefox 19+ */
+			font-size: 1.2rem;  
+		}
+
+		&:-ms-input-placeholder {
+			font-size: 1.2rem;  
+		}
+	}
+
+
+	@media only screen and (max-width: @computerBreakpoint) and (min-width: @mobileBreakpoint) {
+		width: 400px;
+	}
 
 	@media only screen and (max-width: @largeMonitorBreakpoint) and (min-width: @computerBreakpoint) {
 		width: 780px;
 	}
 
-	@media only screen and (max-width: @widescreenMonitorBreakpoint) and (min-width: @largeMonitorBreakpoint) {
+	@media only screen and (min-width: @largeMonitorBreakpoint) {
 		width: 900px;
 	}
 }

@@ -13,34 +13,34 @@ body {
 --------------------*/
 
 	.container {
-		position: absolute;
-		left: 50%;
-		top: 50%;
+		width: 100%;	
 		padding: 2em;
 		transition: all 0.5s ease;
-		-webkit-transform: translate(-50%, -50%);
-		transform: translate(-50%, -50%);
-		width: 1000px;
 
-		@media only screen and (max-width: @widescreenMonitorBreakpoint) and (min-width: @largeMonitorBreakpoint) {
-			width: 1000px;
+		@media only screen and (min-width: @largestMobileScreen) {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);	
 		}
 
-		@media only screen and (max-width: @largeMonitorBreakpoint) and (min-width: @computerBreakpoint) {
-			width: 850px;
+		@media only screen and (max-width: @tabletBreakpoint) and (min-width: @largestMobileScreen) {
+			width: 600px;
 		}
 
 		@media only screen and (max-width: @computerBreakpoint) and (min-width: @tabletBreakpoint) {
 			width: 700px;
 		}
 
-		@media only screen and (max-width: @tabletBreakpoint) and (min-width: @mobileBreakpoint) {
-			width: 600px;
+		@media only screen and (max-width: @largeMonitorBreakpoint) and (min-width: @computerBreakpoint) {
+			width: 850px;
 		}
 
-		@media only screen and (max-width: @mobileBreakpoint) {
-			width: 100%;
+		@media only screen and (min-width: @largeMonitorBreakpoint) {
+			width: 1000px;
 		}
+
 	}
 
 
@@ -58,45 +58,57 @@ body {
 --------------------*/
 
 	.parallax {
-		perspective: 300px;
-		height: 100vh;
-		overflow-x: hidden;
-		overflow-y: auto;
+		@media only screen and (min-width: @largestMobileScreen) {
+			perspective: 300px;
+			height: 100vh;
+			overflow-x: hidden;
+			overflow-y: auto;
+		}
 	}
 
 	.parallax__layer {
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
+		@media only screen and (min-width: @largestMobileScreen) {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+		}
 	}
 
 	.parallax__layer--fore {
-		-webkit-transform: translateZ(90px) scale(.7);
-		transform: translateZ(90px) scale(.7);
-		z-index: 1;
+		@media only screen and (min-width: @largestMobileScreen) {
+			-webkit-transform: translateZ(90px) scale(.7);
+			transform: translateZ(90px) scale(.7);
+			z-index: 1; 
+		}
 	}
 
 	.parallax__layer--base {
-		-webkit-transform: translateZ(0);
-		transform: translateZ(0);
-		z-index: 4;
+		@media only screen and (min-width: @largestMobileScreen) {
+			-webkit-transform: translateZ(0);
+			transform: translateZ(0);
+			z-index: 4;
+		}
 	}
 
 	.parallax__layer--back {
-		-webkit-transform: translateZ(-300px) scale(2);
-		transform: translateZ(-300px) scale(2);
-		z-index: 3;
+		@media only screen and (min-width: @largestMobileScreen) {
+			-webkit-transform: translateZ(-300px) scale(2);
+			transform: translateZ(-300px) scale(2);
+			z-index: 3;
+		}
 	}
 
 	.parallax__group {
-		position: relative;
-		height: 100vh;
-		-webkit-transform-style: preserve-3d;
-		transform-style: preserve-3d;
-		-webkit-transition: -webkit-transform 0.5s;
-		transition: transform 0.5s;
+		@media only screen and (min-width: @largestMobileScreen) {
+			position: relative;
+			height: 100vh;
+			-webkit-transform-style: preserve-3d;
+			transform-style: preserve-3d;
+			-webkit-transition: -webkit-transform 0.5s;
+			transition: transform 0.5s;
+		}
 	}	
 
 /*-------------------
@@ -110,16 +122,16 @@ body {
 		height: 500px;
 		position: absolute;
 		z-index: -1;
-		opacity: 0.4;
+		opacity: 0.3;
 		transition: all 0.5s ease;
 
 		@media only screen and (max-width: @largeMonitorBreakpoint) and (min-width: @computerBreakpoint) {
-			width: 300px;
-			height: 300px;
-			-webkit-background-size: 300px;
-			-moz-background-size: 300px;
-			-o-background-size: 300px;
-			background-size: 300px;
+			width: 350px;
+			height: 350px;
+			-webkit-background-size: 350px;
+			-moz-background-size: 350px;
+			-o-background-size: 350px;
+			background-size: 350px;
 		}
 
 		@media only screen and (max-width: @computerBreakpoint) {
@@ -172,7 +184,11 @@ body {
 		text-align: center;
 
 		.logo {
-			margin-bottom: 5em;
+			margin-bottom: 3em;
+			
+			@media only screen and (max-width: @largestMobileScreen) {
+				margin-top: 3em;
+			}
 
 			img {
 				vertical-align: middle;
@@ -181,13 +197,25 @@ body {
 			.string-txt {
 				padding: 20px 0 0 25px;
 				height: 100px;
+
+				@media only screen and (max-width: @mobileBreakpoint) {
+					padding-left: 0;
+				}
 			}
 
 		}
 
-
 		.intro-txt {
 			color: @white;
+
+			@media only screen and (max-width: @mobileBreakpoint) {
+				margin-bottom: 5em;
+			}
+
+			@media only screen and (max-width: @largestMobileScreen) and (min-width: @mobileBreakpoint) {
+				width: 400px;
+				margin: 0 auto 5em;
+			}
 
 			img {
 				text-align: center;
@@ -203,7 +231,7 @@ body {
 			}
 
 			.intro-pad {
-				margin-bottom: 5rem;
+				margin-bottom: 3rem;
 
 				h1, h2 {
 					margin: 0;
@@ -211,8 +239,23 @@ body {
 			}
 		}
 
-/* Back */
+		.three.column.row {
+			margin-bottom: 1rem;
+		}
 
+		.one.column.row {
+			text-align: center;
+
+			.first.button {
+				margin-bottom: 1.5em;
+			}
+		}
+
+/* Back */
+		@media only screen and (max-width: @largestMobileScreen) {
+			background: @bluegrad;
+		}
+		
 		.parallax__layer--back {
 			background: @bluegrad;
 			
@@ -245,49 +288,78 @@ body {
 --------------------*/
 
 	#group2 {
+		position: relative;
 		z-index: 4;
 		text-align: center;
 
-		.parallax__layer--base {
-			background: @darkblue;
-			-webkit-box-shadow: 0px -0px 20px 2px rgba(33,51,59,0.5);
-			-moz-box-shadow: 0px -0px 20px 2px rgba(33,51,59,0.5);
-			box-shadow: 0px -0px 20px 2px rgba(33,51,59,0.5);
+		.one.column.row {
+			text-align: center;
+			margin-top: 3rem;
 		}
 
-		.parallax__layer--base::after {
-			content: "";
-			background: url(themes/string/assets/video_background.jpg) no-repeat center center;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
-			opacity: 0.8;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			position: absolute;
-			z-index: -1;
+		@media only screen and (max-width: @largestMobileScreen) {		
+			background: @darkblue;
+
+			&::after {
+				content: "";
+				background: url(themes/string/assets/video_background.jpg) no-repeat center center;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+				opacity: 0.8;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				position: absolute;
+				z-index: -1;
+			}
+
+			.page {
+				margin: 30% 0;
+			}
+		}
+
+		@media only screen and (min-width: @largestMobileScreen) {
+
+			.parallax__layer--base {
+				background: @darkblue;
+				-webkit-box-shadow: 0px -0px 20px 2px rgba(33,51,59,0.5);
+				-moz-box-shadow: 0px -0px 20px 2px rgba(33,51,59,0.5);
+				box-shadow: 0px -0px 20px 2px rgba(33,51,59,0.5);
+			}
+
+			.parallax__layer--base::after {
+				content: "";
+				background: url(themes/string/assets/video_background.jpg) no-repeat center center;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+				opacity: 0.8;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				position: absolute;
+				z-index: -1;
+			}
 		}
 
 		.container {
-			width: 1100px;
-
-			// @media only screen and (max-width: @widescreenMonitorBreakpoint) and (min-width: @largeMonitorBreakpoint) {
-			// 	width: 1100px;
-			// }
-
-			@media only screen and (max-width: @largeMonitorBreakpoint) and (min-width: @computerBreakpoint) {
-				width: 900px;
-			}
+			width: 100%;
 
 			@media only screen and (max-width: @computerBreakpoint) and (min-width: @tabletBreakpoint) {
 				width: 700px;
 			}
 
-			@media only screen and (max-width: @tabletBreakpoint) {
-				width: 100%;
+			@media only screen and (max-width: @largeMonitorBreakpoint) and (min-width: @computerBreakpoint) {
+				width: 900px;
+			}
+
+			@media only screen and (min-width: @largeMonitorBreakpoint) {
+				width: 1100px;
 			}
 		}
 
@@ -297,36 +369,115 @@ body {
      String Info
 --------------------*/
 
-	#group4.parallax__group {
-		height: 700px;
-	}
-	
 	#group4 {
+		position: relative;
 
-		.parallax__layer--base {
-			height: 700px;
+		.one.column.row {
+			text-align: center
 		}
 
-		.parallax__layer--back {
-			height: 100vh;
+		@media only screen and (max-width: @largestMobileScreen) {
 			background: @bluegrad;
-		}
+			z-index: 1;
 
-		.parallax__layer--back::after {
-			content: "";			
-			background: url(themes/string/assets/parallax_image_2.png) no-repeat center center;
-			-webkit-background-size: cover;
-			-moz-background-size: cover;
-			-o-background-size: cover;
-			background-size: cover;
-			opacity: 0.1;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			right: 0;
-			position: absolute;
-			z-index: -1;		
-		}
+			&::after {
+				content: "";			
+				background: url(themes/string/assets/parallax_image_2.png) no-repeat center center;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+				opacity: 0.1;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				position: absolute;
+				z-index: -1;
+			}
+
+			.ui.row {
+				z-index: 2
+			}
+
+			.column {
+				margin-bottom: 100px !important;
+			}
+
+			.first-string, .second-string  {
+				margin-bottom: 0;
+			}
+
+			.header {
+				h1 {
+					margin: 3rem 0;
+				}
+			} // Header
+
+			.ui.grid::after {
+				content: "";			
+				visibility: visible;
+				border-left: 4px solid rgba(255, 255, 255, 1);
+				height: 67%;
+				top: 25%;
+				left: 50%;
+				bottom: 0;
+				right: 0;
+				position: absolute;
+				z-index: -2;
+			}
+		} // Mobile Styling
+
+		@media only screen and (min-width: @mobileBreakpoint) and (max-width: @largestMobileScreen) {
+			.container {
+				width: 400px;
+				margin: 0 auto;
+			}
+		} // Largest Mobile screen Styling
+
+		@media only screen and (min-width: @largestMobileScreen) {
+
+			&.parallax__group {
+				height: 800px;
+			}
+
+			.parallax__layer--base {
+				height: 800px;
+			}
+
+			.parallax__layer--back {
+				height: 100vh;
+				background: @bluegrad;
+			}
+
+			.parallax__layer--back::after {
+				content: "";			
+				background: url(themes/string/assets/parallax_image_2.png) no-repeat center center;
+				-webkit-background-size: cover;
+				-moz-background-size: cover;
+				-o-background-size: cover;
+				background-size: cover;
+				opacity: 0.1;
+				top: 0;
+				left: 0;
+				bottom: 0;
+				right: 0;
+				position: absolute;
+				z-index: -1;		
+			}
+
+			.ui.grid > .line::after {
+				content: "";			
+				visibility: visible;
+				border: 2px solid rgba(255, 255, 255, 1);
+				top: 50%;
+				left: 80px;
+				bottom: 0;
+				right: 80px;
+				position: absolute;
+				z-index: -2;
+			}
+		} // Tablet + Desktop Styling
 
 		.header {
 			h1 {
@@ -337,23 +488,10 @@ body {
 
 		.first-string {
 			margin-bottom: 7rem;
-
 		}
 
 		.second-string {
 			margin-bottom: 5rem;
-		}
-
-		.ui.grid > .line::after {
-			content: "";			
-			visibility: visible;
-			border: 2px solid rgba(255, 255, 255, 1);;
-			top: 50%;
-			left: 80px;
-			bottom: 0;
-			right: 80px;
-			position: absolute;
-			z-index: -2;
 		}
 
 		.column {
@@ -364,6 +502,10 @@ body {
 				height: 5em;
   				text-align: center;
 				padding: 0 5em;
+
+				@media only screen and (max-width: @smallestMobileScreen) {
+					padding: 0 2em;
+				}
 
 				@media only screen and (max-width: @computerBreakpoint) and (min-width: @tabletBreakpoint) {
 					padding: 0 1em;
@@ -397,30 +539,18 @@ body {
 		.hex::after {
 			background: url(themes/string/assets/dot-bg-hex.svg) no-repeat center center;
 			background-size:100%;
-
-			// @media only screen and (max-width: @largeMonitorBreakpoint) and (min-width: @computerBreakpoint) {
-			// 	background-size:80%;
-			// }
 		}
 
 		.circle::after {
 			background: url(themes/string/assets/dot-bg-circle.svg) no-repeat center center;
 			background-size: 100%;
-
-			// @media only screen and (max-width: @largeMonitorBreakpoint) and (min-width: @computerBreakpoint) {
-			// 	background-size:80%;
-			// }
 		}
 
 		.square::after {
 			background: url(themes/string/assets/dot-bg-sqaure.svg) no-repeat center center;
 			background-size: 100%;
-
-			// @media only screen and (max-width: @largeMonitorBreakpoint) and (min-width: @computerBreakpoint) {
-			// 	background-size:75%;
-			// }
 		}
-	}
+	} // #group4
 
 /*-------------------
      Registration
@@ -430,11 +560,24 @@ body {
 	#group5 {
 		text-align: center;
 
-		.parallax__layer--base {
+		@media only screen and (max-width: @largestMobileScreen) {
 			background: @bluegrad;
 			-webkit-box-shadow: 0px -3px 20px 2px rgba(33,51,59,0.5);
 			-moz-box-shadow: 0px -3px 20px 2px rgba(33,51,59,0.5);
 			box-shadow: 0px -3px 20px 2px rgba(33,51,59,0.5);
+
+			h1 {
+				margin: 3rem 0;
+			}
+		}
+
+		@media only screen and (min-width: @largestMobileScreen) {
+			.parallax__layer--base {
+				background: @bluegrad;
+				-webkit-box-shadow: 0px -3px 20px 2px rgba(33,51,59,0.5);
+				-moz-box-shadow: 0px -3px 20px 2px rgba(33,51,59,0.5);
+				box-shadow: 0px -3px 20px 2px rgba(33,51,59,0.5);
+			}
 		}
 
 		.ui.input, .ui.button {
@@ -443,7 +586,12 @@ body {
 
 		.ui.button {
 			margin-bottom: 2em;
+
+			&.inverted {
+				margin: 0;
+			}
 		}
+
 
 		.body-lrg {
 			font-size: 1.2em;

@@ -202,25 +202,24 @@ body {
 /* End of #string */
 }
 #string .container {
-  position: absolute;
-  left: 50%;
-  top: 50%;
+  width: 100%;
   padding: 2em;
   -webkit-transition: all 0.5s ease;
           transition: all 0.5s ease;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-  width: 1000px;
 }
-@media only screen and (max-width: 1920px) and (min-width: 1400px) {
+@media only screen and (min-width: 767px) {
   #string .container {
-    width: 1000px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
   }
 }
-@media only screen and (max-width: 1400px) and (min-width: 992px) {
+@media only screen and (max-width: 768px) and (min-width: 767px) {
   #string .container {
-    width: 850px;
+    width: 600px;
   }
 }
 @media only screen and (max-width: 992px) and (min-width: 768px) {
@@ -228,55 +227,67 @@ body {
     width: 700px;
   }
 }
-@media only screen and (max-width: 768px) and (min-width: 414px) {
+@media only screen and (max-width: 1400px) and (min-width: 992px) {
   #string .container {
-    width: 600px;
+    width: 850px;
   }
 }
-@media only screen and (max-width: 414px) {
+@media only screen and (min-width: 1400px) {
   #string .container {
-    width: 100%;
+    width: 1000px;
   }
 }
 #string .page {
   padding: 0em;
 }
-#string .parallax {
-  -webkit-perspective: 300px;
-          perspective: 300px;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: auto;
+@media only screen and (min-width: 767px) {
+  #string .parallax {
+    -webkit-perspective: 300px;
+            perspective: 300px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
 }
-#string .parallax__layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
+@media only screen and (min-width: 767px) {
+  #string .parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
-#string .parallax__layer--fore {
-  -webkit-transform: translateZ(90px) scale(0.7);
-  transform: translateZ(90px) scale(0.7);
-  z-index: 1;
+@media only screen and (min-width: 767px) {
+  #string .parallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(0.7);
+    transform: translateZ(90px) scale(0.7);
+    z-index: 1;
+  }
 }
-#string .parallax__layer--base {
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
-  z-index: 4;
+@media only screen and (min-width: 767px) {
+  #string .parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+  }
 }
-#string .parallax__layer--back {
-  -webkit-transform: translateZ(-300px) scale(2);
-  transform: translateZ(-300px) scale(2);
-  z-index: 3;
+@media only screen and (min-width: 767px) {
+  #string .parallax__layer--back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+  }
 }
-#string .parallax__group {
-  position: relative;
-  height: 100vh;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
+@media only screen and (min-width: 767px) {
+  #string .parallax__group {
+    position: relative;
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+  }
 }
 #string .string-bg-dots {
   background: url(themes/string/assets/background_dots.png) no-repeat center center;
@@ -284,15 +295,15 @@ body {
   height: 500px;
   position: absolute;
   z-index: -1;
-  opacity: 0.4;
+  opacity: 0.3;
   -webkit-transition: all 0.5s ease;
           transition: all 0.5s ease;
 }
 @media only screen and (max-width: 1400px) and (min-width: 992px) {
   #string .string-bg-dots {
-    width: 300px;
-    height: 300px;
-    background-size: 300px;
+    width: 350px;
+    height: 350px;
+    background-size: 350px;
   }
 }
 @media only screen and (max-width: 992px) {
@@ -335,7 +346,12 @@ body {
 /* Back */
 }
 #string #group1 .logo {
-  margin-bottom: 5em;
+  margin-bottom: 3em;
+}
+@media only screen and (max-width: 767px) {
+  #string #group1 .logo {
+    margin-top: 3em;
+  }
 }
 #string #group1 .logo img {
   vertical-align: middle;
@@ -344,8 +360,24 @@ body {
   padding: 20px 0 0 25px;
   height: 100px;
 }
+@media only screen and (max-width: 415px) {
+  #string #group1 .logo .string-txt {
+    padding-left: 0;
+  }
+}
 #string #group1 .intro-txt {
   color: #ffffff;
+}
+@media only screen and (max-width: 415px) {
+  #string #group1 .intro-txt {
+    margin-bottom: 5em;
+  }
+}
+@media only screen and (max-width: 767px) and (min-width: 415px) {
+  #string #group1 .intro-txt {
+    width: 400px;
+    margin: 0 auto 5em;
+  }
 }
 #string #group1 .intro-txt img {
   text-align: center;
@@ -359,11 +391,26 @@ body {
   line-height: 1.4em;
 }
 #string #group1 .intro-txt .intro-pad {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
 }
 #string #group1 .intro-txt .intro-pad h1,
 #string #group1 .intro-txt .intro-pad h2 {
   margin: 0;
+}
+#string #group1 .three.column.row {
+  margin-bottom: 1rem;
+}
+#string #group1 .one.column.row {
+  text-align: center;
+}
+#string #group1 .one.column.row .first.button {
+  margin-bottom: 1.5em;
+}
+@media only screen and (max-width: 767px) {
+  #string #group1 {
+    background: -webkit-linear-gradient(88deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
+    background: linear-gradient(2deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
+  }
 }
 #string #group1 .parallax__layer--back {
   background: -webkit-linear-gradient(88deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
@@ -372,65 +419,161 @@ body {
 /* Changing BG Colour Effect */
 }
 #string #group2 {
+  position: relative;
   z-index: 4;
   text-align: center;
 }
-#string #group2 .parallax__layer--base {
-  background: #17434e;
-  box-shadow: 0px 0px 20px 2px rgba(33, 51, 59, 0.5);
+#string #group2 .one.column.row {
+  text-align: center;
+  margin-top: 3rem;
 }
-#string #group2 .parallax__layer--base::after {
-  content: "";
-  background: url(themes/string/assets/video_background.jpg) no-repeat center center;
-  background-size: cover;
-  opacity: 0.8;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+@media only screen and (max-width: 767px) {
+  #string #group2 {
+    background: #17434e;
+  }
+  #string #group2::after {
+    content: "";
+    background: url(themes/string/assets/video_background.jpg) no-repeat center center;
+    background-size: cover;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  #string #group2 .page {
+    margin: 30% 0;
+  }
+}
+@media only screen and (min-width: 767px) {
+  #string #group2 .parallax__layer--base {
+    background: #17434e;
+    box-shadow: 0px 0px 20px 2px rgba(33, 51, 59, 0.5);
+  }
+  #string #group2 .parallax__layer--base::after {
+    content: "";
+    background: url(themes/string/assets/video_background.jpg) no-repeat center center;
+    background-size: cover;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
 }
 #string #group2 .container {
-  width: 1100px;
-}
-@media only screen and (max-width: 1400px) and (min-width: 992px) {
-  #string #group2 .container {
-    width: 900px;
-  }
+  width: 100%;
 }
 @media only screen and (max-width: 992px) and (min-width: 768px) {
   #string #group2 .container {
     width: 700px;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1400px) and (min-width: 992px) {
   #string #group2 .container {
-    width: 100%;
+    width: 900px;
   }
 }
-#string #group4.parallax__group {
-  height: 700px;
+@media only screen and (min-width: 1400px) {
+  #string #group2 .container {
+    width: 1100px;
+  }
 }
-#string #group4 .parallax__layer--base {
-  height: 700px;
+#string #group4 {
+  position: relative;
 }
-#string #group4 .parallax__layer--back {
-  height: 100vh;
-  background: -webkit-linear-gradient(88deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
-  background: linear-gradient(2deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
+#string #group4 .one.column.row {
+  text-align: center;
 }
-#string #group4 .parallax__layer--back::after {
-  content: "";
-  background: url(themes/string/assets/parallax_image_2.png) no-repeat center center;
-  background-size: cover;
-  opacity: 0.1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  position: absolute;
-  z-index: -1;
+@media only screen and (max-width: 767px) {
+  #string #group4 {
+    background: -webkit-linear-gradient(88deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
+    background: linear-gradient(2deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
+    z-index: 1;
+  }
+  #string #group4::after {
+    content: "";
+    background: url(themes/string/assets/parallax_image_2.png) no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  #string #group4 .ui.row {
+    z-index: 2;
+  }
+  #string #group4 .column {
+    margin-bottom: 100px !important;
+  }
+  #string #group4 .first-string,
+  #string #group4 .second-string {
+    margin-bottom: 0;
+  }
+  #string #group4 .header h1 {
+    margin: 3rem 0;
+  }
+  #string #group4 .ui.grid::after {
+    content: "";
+    visibility: visible;
+    border-left: 4px solid #ffffff;
+    height: 67%;
+    top: 25%;
+    left: 50%;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
+  }
+}
+@media only screen and (min-width: 415px) and (max-width: 767px) {
+  #string #group4 .container {
+    width: 400px;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 767px) {
+  #string #group4.parallax__group {
+    height: 800px;
+  }
+  #string #group4 .parallax__layer--base {
+    height: 800px;
+  }
+  #string #group4 .parallax__layer--back {
+    height: 100vh;
+    background: -webkit-linear-gradient(88deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
+    background: linear-gradient(2deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
+  }
+  #string #group4 .parallax__layer--back::after {
+    content: "";
+    background: url(themes/string/assets/parallax_image_2.png) no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+  }
+  #string #group4 .ui.grid > .line::after {
+    content: "";
+    visibility: visible;
+    border: 2px solid #ffffff;
+    top: 50%;
+    left: 80px;
+    bottom: 0;
+    right: 80px;
+    position: absolute;
+    z-index: -2;
+  }
 }
 #string #group4 .header h1 {
   text-align: center;
@@ -441,17 +584,6 @@ body {
 }
 #string #group4 .second-string {
   margin-bottom: 5rem;
-}
-#string #group4 .ui.grid > .line::after {
-  content: "";
-  visibility: visible;
-  border: 2px solid #ffffff;
-  top: 50%;
-  left: 80px;
-  bottom: 0;
-  right: 80px;
-  position: absolute;
-  z-index: -2;
 }
 #string #group4 .column p {
   display: -webkit-box;
@@ -470,6 +602,11 @@ body {
   height: 5em;
   text-align: center;
   padding: 0 5em;
+}
+@media only screen and (max-width: 321px) {
+  #string #group4 .column p {
+    padding: 0 2em;
+  }
 }
 @media only screen and (max-width: 992px) and (min-width: 768px) {
   #string #group4 .column p {
@@ -514,10 +651,22 @@ body {
 #string #group5 {
   text-align: center;
 }
-#string #group5 .parallax__layer--base {
-  background: -webkit-linear-gradient(88deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
-  background: linear-gradient(2deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
-  box-shadow: 0px -3px 20px 2px rgba(33, 51, 59, 0.5);
+@media only screen and (max-width: 767px) {
+  #string #group5 {
+    background: -webkit-linear-gradient(88deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
+    background: linear-gradient(2deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
+    box-shadow: 0px -3px 20px 2px rgba(33, 51, 59, 0.5);
+  }
+  #string #group5 h1 {
+    margin: 3rem 0;
+  }
+}
+@media only screen and (min-width: 767px) {
+  #string #group5 .parallax__layer--base {
+    background: -webkit-linear-gradient(88deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
+    background: linear-gradient(2deg, #798983, #377a80, #0d687d, #0e637f, #0d687d, #377a80);
+    box-shadow: 0px -3px 20px 2px rgba(33, 51, 59, 0.5);
+  }
 }
 #string #group5 .ui.input,
 #string #group5 .ui.button {
@@ -525,6 +674,9 @@ body {
 }
 #string #group5 .ui.button {
   margin-bottom: 2em;
+}
+#string #group5 .ui.button.inverted {
+  margin: 0;
 }
 #string #group5 .body-lrg {
   font-size: 1.2em;
